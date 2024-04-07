@@ -53,4 +53,16 @@ public class SequentialSearchST<K, V> {
             keyList.add(x.key);
         return keyList;
     }
+
+    public boolean contains(K key) {
+        return get(key) != null;
+    }
+
+    public boolean isEmpty() {
+        return N == 0;
+    }
+
+    public int size() {
+        return N;
+    }
 }
