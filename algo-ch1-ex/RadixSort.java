@@ -8,11 +8,10 @@ public class RadixSort {
 
         while(m / exp > 0) {
             int[] C = new int[10];
-            for(i = 0; i < N; i++) C[(A[i] / exp) % 10]++;
-            for(i = 1; i < 10; i++) C[i] += C[i - 1];
+            for(i = 0; i < N; i++)      C[(A[i] / exp) % 10]++;
+            for(i = 1; i < 10; i++)     C[i] += C[i - 1];
             for(i = N - 1; i >= 0; i--) B[--C[(A[i] / exp) % 10]] = A[i];
-            for(i = 0; i < N; i++)
-                A[i] = B[i];
+            for(i = 0; i < N; i++)      A[i] = B[i];
             exp *= 10;
         }
     }

@@ -1,3 +1,5 @@
+// 22011475 구준혁
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -40,20 +42,20 @@ public class Main {
     }
     
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {  // 입출력 예외 처리
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input_value;
+        String input_value;  // br로 읽어올 값
         Node root;
         
-        root = new Node(Integer.parseInt(br.readLine()));
+        root = new Node(Integer.parseInt(br.readLine()));  // 처음으로 읽어온 값을 root 노드로 설정.
         while(true) {
             input_value = br.readLine();
-            if(input_value == null || input_value == "")
+            if(input_value == null || input_value == "")  // 끝까지 읽기.
                 break;
-            root.insert(Integer.parseInt(input_value));
+            root.insert(Integer.parseInt(input_value));  // 읽어 들이는 값을 정수로 변환후 삽입.
         }
 
-        postOrder(root);
+        postOrder(root);  // root노드부터 후위 순회.
         System.out.println(sb);
     }
 }
