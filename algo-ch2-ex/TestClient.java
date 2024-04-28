@@ -27,6 +27,5 @@ public class TestClient {
         } catch(FileNotFoundException e) {e.printStackTrace();}
         if(sc != null)
             sc.close();
-        }
     }
 }
